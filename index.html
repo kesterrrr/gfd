@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Girlfriend's Day ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Poppins,sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff4f8);
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    width:100%;
+    max-width:380px;
+    border-radius:30px;
+    padding:35px 25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(255,105,180,.25);
+    position:relative;
+    z-index:10;
+}
+
+h1{
+    font-family:"Dancing Script",cursive;
+    color:#ff4f87;
+    font-size:50px;
+}
+
+h2{
+    margin-top:10px;
+    color:#444;
+    font-size:20px;
+}
+
+.message{
+    margin-top:25px;
+    color:#666;
+    line-height:1.8;
+    font-size:15px;
+}
+
+button{
+    margin-top:30px;
+    border:none;
+    background:#ff5d93;
+    color:white;
+    padding:15px 28px;
+    border-radius:50px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+    font-weight:600;
+}
+
+button:hover{
+    transform:scale(1.05);
+}
+
+#surprise{
+    display:none;
+    margin-top:25px;
+    animation:fade .8s;
+}
+
+#surprise h3{
+    color:#ff4f87;
+    margin-bottom:12px;
+}
+
+#surprise p{
+    color:#666;
+    line-height:1.7;
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+.heart{
+    position:absolute;
+    color:#ff6fa5;
+    animation:float linear infinite;
+    opacity:.8;
+}
+
+@keyframes float{
+from{
+transform:translateY(100vh) scale(.5);
+opacity:0;
+}
+20%{
+opacity:1;
+}
+to{
+transform:translateY(-120px) scale(1.3);
+opacity:0;
+}
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+<h1>Happy</h1>
+<h2>Girlfriend's Day Sam!!!❤️ </h2>
+
+<div class="message">
+Thank you for making my life brighter every single day.
+<br><br>
+Every laugh, every call, every memory with you is something I'll always treasure.
+</div>
+
+<button onclick="showLove()">Tap Me 💖</button>
+
+<div id="surprise">
+<h3>To My Favorite Person Sam 🌸</h3>
+
+<p>
+I just wanted to remind you how grateful I am to have you.
+<br><br>
+Thank you for loving me, supporting me, and staying by my side.
+<br><br>
+No matter how busy life gets, I'll always choose you.
+<br><br>
+I love you so much. ❤️
+</p>
+
+<div style="font-size:45px;margin-top:20px;">
+🥰💕🌹
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function showLove(){
+document.getElementById("surprise").style.display="block";
+}
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=["💖","💕","💗","💘","❤️"][Math.floor(Math.random()*5)];
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(18+Math.random()*18)+"px";
+
+heart.style.animationDuration=(5+Math.random()*5)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},10000);
+
+}
+
+setInterval(createHeart,350);
+
+</script>
+
+</body>
+</html>
